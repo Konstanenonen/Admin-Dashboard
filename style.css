@@ -58,6 +58,7 @@ table {
   width: 100vw;
   height: 100vh;
   --primary-color: rgb(67, 162, 251);
+  --secondary-color: rgb(224, 231, 246);
 }
 
 body {
@@ -104,7 +105,7 @@ nav.top > .search-bar {
   flex: 1;
   margin-right: 10%;
   border: none;
-  background-color: rgb(224, 238, 246);
+  background-color: var(--secondary-color);
   border-radius: 15px;
   padding: 5px;
 }
@@ -186,5 +187,37 @@ ul.support-links > li {
 }
 
 .projects {
+  background-color: var(--secondary-color);
+  padding: 20px;
   grid-area: projects;
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  gap: 10px;
+}
+
+.projects > .titles {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.titles > h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.projects > .content {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 15px;
+}
+
+.content > .project-area {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.content > .side-content {
+  display: grid;
+  gap: 65px;
 }
