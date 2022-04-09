@@ -80,6 +80,37 @@ h1 {
 
 .header {
   grid-area: header;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+nav.top {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+nav.top > .search-bar {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  align-items: center;
+}
+
+.search-bar > .search-logo {
+  justify-self: center;
+}
+
+.search-bar > input[type="search"] {
+  border: none;
+  background-color: rgb(228, 234, 241);
+  border-radius: 15px;
+  padding: 5px;
+}
+
+nav.top > ul {
+  padding-right: 10%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  place-items: center;
 }
 
 .sidebar {
