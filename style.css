@@ -57,6 +57,7 @@ table {
 :root {
   width: 100vw;
   height: 100vh;
+  --primary-color: rgb(67, 162, 251);
 }
 
 body {
@@ -90,18 +91,20 @@ nav.top {
 }
 
 nav.top > .search-bar {
-  display: grid;
-  grid-template-columns: 1fr 5fr;
+  display: flex;
   align-items: center;
 }
 
 .search-bar > .search-logo {
-  justify-self: center;
+  margin-left: 40px;
+  margin-right: 10px;
 }
 
 .search-bar > input[type="search"] {
+  flex: 1;
+  margin-right: 10%;
   border: none;
-  background-color: rgb(228, 234, 241);
+  background-color: rgb(224, 238, 246);
   border-radius: 15px;
   padding: 5px;
 }
@@ -113,15 +116,59 @@ nav.top > ul {
   place-items: center;
 }
 
+nav.bottom {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+}
+
+ul.filtters {
+  padding-right: 10%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+}
+
+ul.filtters > li > button {
+  border: none;
+  border-radius: 15px;
+  width: 100px;
+  height: 40px;
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.user-area {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  align-items: center;
+}
+
+.user-area > .user-logo {
+  margin-left: 40px;
+}
+
+.user-greeting > p {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.user-greeting > h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
 .sidebar {
   grid-area: sidebar;
-  background-color: rgb(67, 162, 251);
+  background-color: var(--primary-color);
 }
 
 .sidebar > nav {
   display: grid;
   gap: 60px;
-  background-color: rgb(67, 162, 251);
+  background-color: var(--primary-color);
 }
 
 .sidebar > nav > h1 {
