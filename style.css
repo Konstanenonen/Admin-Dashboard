@@ -18,7 +18,7 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	border: 1px solid red;
+	border: none;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
@@ -51,7 +51,6 @@ table {
 
 * {
   box-sizing: border-box;
-  border: 1px solid red;
 }
 
 :root {
@@ -80,6 +79,17 @@ body {
   grid-template-rows: 1fr 1fr;
 }
 
+.profile-picture {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.small {
+  width: 60px;
+  height: 60px;
+}
+
 nav.top {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -101,7 +111,7 @@ nav.top > .search-bar {
   border: none;
   background-color: var(--secondary-color);
   border-radius: 15px;
-  padding: 5px;
+  padding: 10px;
 }
 
 nav.top > ul {
@@ -109,6 +119,11 @@ nav.top > ul {
   display: grid;
   grid-template-columns: 1fr 1fr 2fr;
   place-items: center;
+}
+
+.profile-name {
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 nav.bottom {
@@ -143,6 +158,8 @@ ul.filtters > li > button {
 
 .user-area > .user-logo {
   margin-left: 40px;
+  margin-right: 20px;
+  margin-bottom: 10px;
 }
 
 .user-greeting > p {
@@ -183,7 +200,7 @@ ul.filtters > li > button {
 ul.nav-links > li,
 ul.support-links > li {
   padding-bottom: 20px;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: bold;
   color: white;
   display: flex;
@@ -239,6 +256,7 @@ ul.support-links > li {
 .project-text > h3 {
   font-size: 1.2rem;
   font-weight: bold;
+  margin-bottom: 8px;
 }
 
 .project-text > p {
@@ -267,9 +285,29 @@ ul.support-links > li {
 }
 
 .side-content > .announcements {
-  padding: 15px;
+  padding: 15px 30px;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
+}
+
+.announcements > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+
+.announcements > div > h4 {
+  font-weight: bold;
+}
+
+.announcements > div > p {
+  color:rgb(87, 87, 87);
+}
+
+.announcements > div:nth-child(2) {
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
 }
 
 .side-content > .trending {
@@ -292,16 +330,18 @@ ul.support-links > li {
 }
 
 .trending-container > div {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  align-content: center;
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
-.text-area > .name {
-  font-weight: bold;
-  font-size: 0.9rem;
+.text-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .text-area > .description {
+  margin-top: 5px;
   color:rgb(87, 87, 87);
 }
