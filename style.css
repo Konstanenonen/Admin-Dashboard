@@ -217,7 +217,42 @@ ul.support-links > li {
   gap: 20px;
 }
 
+.project-area > .project-card {
+  background-color: white;
+  border-radius: 10px;
+  border-left: 10px solid rgb(199, 186, 5);
+  box-shadow: 0 0 8px rgb(158, 157, 157);
+  padding: 30px 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr 1fr;
+}
+
+.project-card > .project-text {
+  grid-area: 1 / 1 / 2 / 3;
+}
+
+.project-text > h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.project-text > p {
+  line-height: 18px;
+  color: rgb(87, 87, 87);
+  font-size: 1.1rem;
+}
+
+.project-card > .buttons {
+  grid-area: 2 / 2 / 3 / 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: end;
+  justify-items: center;
+}
+
 .content > .side-content {
   display: grid;
   gap: 65px;
 }
+
